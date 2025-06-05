@@ -5,7 +5,7 @@
   <script src="https://www.google.com/recaptcha/api.js?render=6Lez-lYrAAAAAFzZYgsV_J0upl3H6DXIcksZaUEe"></script>
   <script>
     grecaptcha.ready(function() {
-      grecaptcha.execute('YOUR_SITE_KEY', {action: 'login'}).then(function(token) {
+      grecaptcha.execute('6Lez-lYrAAAAAFzZYgsV_J0upl3H6DXIcksZaUEe', {action: 'login'}).then(function(token) {
         document.getElementById('recaptcha_token').value = token;
       });
     });
