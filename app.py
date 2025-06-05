@@ -1,9 +1,11 @@
 from flask import Flask, request, render_template
 import requests
+import os
 
 app = Flask(__name__)
 
-RECAPTCHA_SECRET = 'YOUR_SECRET_KEY'  # Replace with your reCAPTCHA v3 secret key
+# RECAPTCHA_SECRET = 'YOUR_SECRET_KEY'  # Replace with your reCAPTCHA v3 secret key
+RECAPTCHA_SECRET = os.getenv('YOUR_SECRET_KEY')  # Read secret key from env var. 
 
 @app.route('/')
 def index():
